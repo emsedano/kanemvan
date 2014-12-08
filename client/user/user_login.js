@@ -6,7 +6,7 @@ Template.user_loggedout.events({
       if (err) {
         alert(err); // some custom packages
       } else{
-        Router.go('dashboard');
+        Router.go('home');
       }
     })
   },
@@ -32,7 +32,7 @@ Template.user_loggedout.events({
           Router.go('signin');
         } else{
           // The user has been logged in.
-          Router.go('dashboard');
+          Router.go('home');
         }
       });
          return false; 
@@ -63,7 +63,7 @@ Template.signin.events({
       if (err) {
         alert(err); // some custom packages
       } else{
-        Router.go('dashboard');
+        Router.go('home');
       }
     })
   },
@@ -89,7 +89,7 @@ Template.signin.events({
           Router.go('signin');
         } else{
           // The user has been logged in.
-          Router.go('dashboard');
+          Router.go('home');
         }
       });
          return false; 
