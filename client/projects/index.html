@@ -1,0 +1,23 @@
+<template name="projects">
+  <div class="container">
+    <header>
+      <h1>Projects ({{projectsCount}})</h1>
+
+      {{#if currentUser}}
+        <form class="new-project">
+          <input type="text" name="text" placeholder="Type to add new tasks" />
+        </form>
+      {{/if}}
+    </header>
+    
+    {{#if isOwner}}
+      <ul>
+      {{#each projects}}
+        {{> project_item}}
+      {{/each}}
+    </ul>
+    {{/if}}
+    
+  </div>
+</template>
+

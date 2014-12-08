@@ -1,0 +1,48 @@
+<template name="user_info">
+  {{#if currentUser}}
+    {{>user_logged}}
+  {{else}}
+    {{>user_loggedout}}
+  {{/if }}
+</template>
+
+<template name="user_logged">
+  <ul class="nav navbar-nav navbar-right">
+    <li>
+      <div class="btn-group dropleft">
+  		  <a type="button" class="btn btn-theme dropdown-toggle" data-toggle="dropdown">
+  		    Account<span class="caret"></span>
+  		  </a>
+  		  <ul class="dropdown-menu" role="menu">
+  		    <li><a href="#">Account</a></li>
+  		    <li><a href="#">Something else here</a></li>
+  		    <li class="divider"></li>
+  		    <li><a id="logout" href="#">Logout</a></li>
+  		  </ul>
+  		</div>
+		</li>
+	</ul>
+</template>
+
+<template name="user_loggedout">
+  <ul class="nav pull-right top-menu">
+      <li>
+        <a id="login" href="#" class="btn btn-github btn-sm"><i class="fa fa-github"></i> Github</a>
+      </li>
+  </ul>
+  <ul class="nav pull-right top-menu">
+	  <li>
+    	<form role="form" id="login-form" class="form-inline">
+        <div class="form-group input-group input-group-sm">
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" placeholder="Username" id="username" class="form-control">
+        </div>
+        <div class="form-group input-group input-group-sm">
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" placeholder="Password" id="password" class="form-control">
+        </div>
+        <button class="btn btn-theme btn-sm" type="submit">Sign in</button>
+      </form>
+    </li>
+  </ul>
+</template>

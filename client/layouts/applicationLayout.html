@@ -1,0 +1,17 @@
+<template name="applicationLayout">
+  <section id="container">
+    
+    {{> navigation}}
+
+    <section id="main-content">
+      <section class="wrapper">
+        <div class="row">
+          {{> yield}}
+        </div>
+      </section>
+    </section>
+    
+    {{> yield "footer"}}
+
+  </section>
+</template>
