@@ -14,4 +14,26 @@
     {{> yield "footer"}}
 
   </section>
+  
+  <script>
+    $(".backstretch").remove();
+  </script>
+</template>
+
+<template name="loginLayout">
+  <div id="login-page">
+  	<div class="container">
+  	     {{> yield}}
+  	</div>
+  </div>
+  <script>
+    //$.backstretch("assets/img/portfolio-bg.jpg", {speed: 500});
+    // Duration is the amount of time in between slides,
+    // and fade is value that determines how quickly the next image will fade in
+    $.backstretch([
+        "assets/img/portfolio-bg.jpg", 
+        "assets/img/body1.jpg", 
+        "assets/img/body2.jpg"
+    ], {duration: 10000, fade: 750});
+  </script>
 </template>
