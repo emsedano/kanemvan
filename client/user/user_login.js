@@ -16,7 +16,7 @@ Template.user_loggedout.events({
       
       e.preventDefault();
       // retrieve the input field values
-      var email = tmpl.find('#username').value
+      var email = tmpl.find('#email').value
         , password = tmpl.find('#password').value;
 
         // Trim and validate your fields here.... 
@@ -73,7 +73,7 @@ Template.signin.events({
       
       e.preventDefault();
       // retrieve the input field values
-      var email = tmpl.find('#username').value
+      var email = tmpl.find('#email').value
         , password = tmpl.find('#password').value;
 
         // Trim and validate your fields here.... 
@@ -94,4 +94,57 @@ Template.signin.events({
       });
          return false; 
       }
+});
+
+
+/********* Registration events ****
+***********************************/
+Template.signup.events({
+  "click #login": function(e, tmpl){
+    Meteor.loginWithGithub({
+      requestPermissions: ['user', 'public_repo']
+    }, function(err){
+      if (err) {
+        alert(err); // some custom packages
+      } else{
+        Router.go('home');
+      }
+    })
+  },
+  
+  
+  'submit #registration-form' : function(e, tmpl){
+      
+    e.preventDefault();
+      // retrieve the input field values
+    var email = tmpl.find('#email').value,
+      name = tmpl.find('#fullname').value,
+      password = tmpl.find('#password').value;
+
+    // Trim and validate your fields here.... 
+
+    // If validation passes, supply the appropriate fields to the
+    // Meteor.loginWithPassword() function.
+        
+    Accounts.createUser({
+          username: email,
+          email : email,
+          password : password,
+          profile  : {
+              name: name
+          }
+        }, function(err){
+        if (err){
+          // The user migh""t not have been found, or their passwword
+          // could be incorrect. Inform the user that their
+          // login attempt has failed. 
+          Router.go('signin');
+        } else{
+          // The user has been logged in.
+          Router.go('home');
+        }
+      });
+      
+    return false; 
+  }
 });

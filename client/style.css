@@ -1,7 +1,62 @@
+body{
+  color: #5D4258;
+}
+
 #container header div.top-menu{
   padding: 15px 0px;
 }
 
 #container header div.top-menu ul{
   margin: 0px 5px;
+}
+
+.sidebar-toggle-box {
+  padding-right: 10px;
+}
+
+.sidebar-toggle-box > .fa-bars{
+  color: white;
+}
+
+section.sidebar-closed .sidebar-toggle-box > .fa-bars,
+section.sidebar-closed .header .logo{
+  color: #5D4258;
+}
+
+
+#sidebar {
+  width: 220px!important;
+  background: #5D4258!important;
+}
+
+ul.top-menu > li > a {
+  color: #5D4258;
+  border: 1px solid #5D4258!important;
+}
+
+.bg-theme {
+  background-color: #5D4258!important;
+}
+
+.btn-theme {
+  background-color: #5D4258!important;
+  border-color: #5D4258!important;
+}
+
+ul.sidebar-menu li a.active, ul.sidebar-menu li a:focus /*,ul.sidebar-menu li a:hover*/ {
+background: #A55796!important;
+}
+
+ul.sidebar-menu li ul.sub li a.active {
+  background: #424a5d!important;
+  color: white;
+}
+
+ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+background: #424a5d;
+}
+
+
+.pn {
+  height: 290px!important;
 }

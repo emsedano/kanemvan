@@ -8,3 +8,5 @@ accounts-password
 accounts-base
 iron:router
 accounts-github
+service-configuration
+

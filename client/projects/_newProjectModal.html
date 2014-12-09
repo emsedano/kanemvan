@@ -1,0 +1,29 @@
+<template name="newProjectModal">
+  <div aria-hidden="true" aria-labelledby="newProjectModal" role="dialog" tabindex="-1" id="newProjectModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">New project</h4>
+        </div>
+        <div class="modal-body">
+          
+          <form action="index.html" class="form-login">
+	          <div class="login-wrap">
+	            <input type="text" autofocus="" placeholder="Project name" class="form-control"/>
+	            <br>
+	            <textarea placeholder="Description" class="form-control"></textarea>
+	            <hr>
+	            <div class="login-social-link centered">
+	               <button type="submit" class="btn btn-success"><i class="fa fa-facebook"></i> Create</button>
+	               <button type="submit" class="btn btn-damger"><i class="fa fa-twitter"></i> Cancel</button>
+	             </div>
+	           </div>
+	        </form>
+	        
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</template>

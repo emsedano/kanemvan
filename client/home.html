@@ -1,22 +1,24 @@
 <template name="home">
-  <div class="col-lg-9 main-chart">
+  <div class="col-lg-12 main-chart">
                   
-
-    
     <!-- /row mt -->	
     <div class="row mt">
+    
     <!-- SERVER STATUS PANELS -->
     	<div class="col-md-4 col-sm-4 mb">
     		<div class="white-panel pn donut-chart">
     			<div class="white-header">
-						<h5>SERVER LOAD</h5>
+						<h5>INGREDIENTA</h5>
           </div>
 					<div class="row">
 						<div class="col-sm-6 col-xs-6 goleft">
-							<p><i class="fa fa-database"></i> 70%</p>
+							<p><i class="fa fa-database"></i> 70% finished</p>
+						</div>
+  						<div class="col-sm-6 col-xs-6 goleft">
+							<p><i class="fa fa-database"></i> 4 Members</p>
 						</div>
 	        </div>
-					<canvas width="120" height="120" id="serverstatus01" style="width: 120px; height: 120px;"></canvas>
+					<canvas id="serverstatus01" height="100" width="100"></canvas>
 					<script>
 						var doughnutData = [
 								{
@@ -30,7 +32,19 @@
 							];
 							var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
 					</script>
-	      </div>
+					<p>Iteration ends on April 17, 2014</p>
+          <div class="row">
+  					<div class="col-md-6">
+  						<p class="small mt">CURRENT ITERATION</p>
+  						<p>001</p>
+  					</div>
+  					<div class="col-md-6">
+  						<p class="small mt">WORKED HOURS</p>
+  						<p>520</p>
+  					</div>
+  				</div>
+	          
+	   </div>
 	      <!-- grey-panel -->
     	</div>
     	<!--col-md-4-->
@@ -108,27 +122,19 @@
         </div><!--  /darkblue panel -->
 			</div><!-- col-md-4  -->
 						
-			<div class="col-md-4 mb">
-				<!-- INSTAGRAM PANEL -->
-				<div class="instagram-panel pn">
-					<i class="fa fa-instagram fa-4x"></i>
-					<p>@THISISYOU<br>
-						5 min. ago
-					</p>
-					<p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
-				</div>
-			</div><!-- /col-md-4 -->
+
 			
 			<div class="col-md-3 col-sm-3 box0">
-        <div class="box1">
-					<span class="li_stack"></span>
-					<h3>+</h3>
-					<h4>New project</h4>
-        </div>
-				<p>You have 23 unread messages in your inbox.</p>
+			  <a href="#newProjectModal" data-toggle="modal">
+          <div class="box1">
+  					<span class="li_stack"></span>
+  					<h3>+</h3>
+  					<h4>New project</h4>
+          </div>
+          </a>
+				<p>Add a new project to your dashboard.</p>
       </div>
 						
 		</div><!-- /row -->
-
   </div>
 </template>
