@@ -1,7 +1,7 @@
 // This code only runs on the client
 Meteor.subscribe("projects");
 
-Template.projects.helpers({
+Template.projectsList.helpers({
   projects: function () {
       // Otherwise, return all of the project
       return Projects.find({}, {sort: {createdAt: -1}});
@@ -17,7 +17,7 @@ Template.projects.helpers({
   }
 });
 
-Template.projects.events({
+Template.projectsList.events({
   "submit .new-project": function (event) {
     // This function is called when the new project form is submitted
     var text = event.target.text.value;
@@ -33,11 +33,12 @@ Template.projects.events({
   
 });
 
-Template.projects.events({
+Template.projectsList.events({
   "click .delete": function () {
     Meteor.call("Project.delete", this._id);
   }
 });
+
 
 
 

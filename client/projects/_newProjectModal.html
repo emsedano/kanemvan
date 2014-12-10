@@ -8,15 +8,15 @@
         </div>
         <div class="modal-body">
           
-          <form action="index.html" class="form-login">
+          <form action="index.html" id="new-project">
 	          <div class="login-wrap">
-	            <input type="text" autofocus="" placeholder="Project name" class="form-control"/>
+	            <input type="text" autofocus="" placeholder="Project name" id="name" class="form-control"/>
 	            <br>
-	            <textarea placeholder="Description" class="form-control"></textarea>
+	            <textarea placeholder="Description" class="form-control" id="description"></textarea>
 	            <hr>
-	            <div class="login-social-link centered">
+	            <div class="centered">
 	               <button type="submit" class="btn btn-success"><i class="fa fa-facebook"></i> Create</button>
-	               <button type="submit" class="btn btn-damger"><i class="fa fa-twitter"></i> Cancel</button>
+	               <button class="btn btn-damger" data-dismiss="modal"><i class="fa fa-twitter"></i> Cancel</button>
 	             </div>
 	           </div>
 	        </form>
@@ -26,4 +26,20 @@
       </div>
     </div>
   </div>
+  
+</template>
+
+<template name="openNewProjectModal">
+	<div class="row">
+		<div id="open-new-product-modal" class="col-md-3 col-sm-3 box0">
+		  <a href="#newProjectModal" data-toggle="modal">
+        <div class="box1">
+					<span class="li_stack"></span>
+					<h5>+</h5>
+					<h3>New project</h3>
+        </div>
+        </a>
+			  <p>Add a new project to your dashboard.</p>
+      </div>
+	  </div><!-- /row -->
 </template>

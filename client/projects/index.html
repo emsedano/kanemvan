@@ -1,4 +1,48 @@
-<template name="projects">
+<template name="projectsList">
+<!-- SERVER STATUS PANELS -->
+	<div class="col-md-4 col-sm-4 mb">
+		<div class="white-panel pn donut-chart">
+			<div class="white-header">
+				<h5>INGREDIENTA</h5>
+      </div>
+			<div class="row">
+				<div class="col-sm-6 col-xs-6 goleft">
+					<p><i class="fa fa-database"></i> 70% finished</p>
+				</div>
+					<div class="col-sm-6 col-xs-6 goleft">
+					<p><i class="fa fa-database"></i> 4 Members</p>
+				</div>
+      </div>
+			<canvas id="serverstatus01" height="100" width="100"></canvas>
+			<script>
+				var doughnutData = [
+						{
+							value: 70,
+							color:"#68dff0"
+						},
+						{
+							value : 30,
+							color : "#fdfdfd"
+						}
+					];
+					var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
+			</script>
+			<p>Iteration ends on April 17, 2014</p>
+      <div class="row">
+				<div class="col-md-6">
+					<p class="small mt">CURRENT ITERATION</p>
+					<p>001</p>
+				</div>
+				<div class="col-md-6">
+					<p class="small mt">WORKED HOURS</p>
+					<p>520</p>
+				</div>
+			</div>
+        
+ </div>
+    <!-- grey-panel -->
+	</div>
+	<!--col-md-4-->
   <div class="container">
     <header>
       <h1>Projects ({{projectsCount}})</h1>

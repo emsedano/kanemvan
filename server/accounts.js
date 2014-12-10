@@ -7,8 +7,6 @@ ServiceConfiguration.configurations.insert({
   clientSecret: '85c1e413eaae866239a29734df4d6726674d52ce'
 });
 
-console.log("ServiceConfiguration =>  " + JSON.stringify(ServiceConfiguration.configurations));
-
 
 
 Accounts.onCreateUser(function(options, user){

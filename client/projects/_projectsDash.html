@@ -1,0 +1,10 @@
+<template name="projectDash">
+  <div class="row mt">
+  {{#each projects}}
+    {{> projectDashItem }}
+  {{/each}}
+  
+  {{>openNewProjectModal}}
+  </div>
+</template>
+
