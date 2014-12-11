@@ -18,3 +18,21 @@
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
+
+.panel-expanded .sticky .short-dash-detail, .sticky .large-dash-detail{
+  display: none;
+}
+
+.panel-expanded .sticky .large-dash-detail, .sticky .short-dash-detail{
+  display: block;
+}
+
+
+.kanban-body .pn {
+  height: 150px!important;
+}
+
+.kanban-body .pn i {
+  margin-top: 15px!important;
+}

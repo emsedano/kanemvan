@@ -1,48 +1,56 @@
-    <template name="projectDashItem">
+<template name="projectDashItem">
     <!-- SERVER STATUS PANELS -->
-    	<div class="col-md-4 col-sm-4 mb panel-dash-item" id="projectDashItem_{{_id}}">
-    		<div class="white-panel pn donut-chart sticky">
-    			<div class="white-header">
-						<h4>{{name}} <a href="#" id="openProject"> <i class="fa fa-expand"></i></a></h4> 
-          </div>
-					<div class="row">
-						<div class="col-sm-6 col-xs-6 goleft">
-							<p><i class="fa fa-database"></i> 70% finished</p>
-						</div>
-  						<div class="col-sm-6 col-xs-6 goleft">
-							<p>{{members.length}} Members  <i class="fa fa-database"></i></p>
-						</div>
-	        </div>
-					<canvas id="projectId_{{_id}}" height="100" width="100"></canvas>
-					<script>
-						
-						new Chart(document.getElementById("projectId_{{_id}}").getContext("2d"))
-							  .Doughnut([
-  								{
-  									value: 70,
-  									color:"#68dff0"
-  								},
-  								{
-  									value : 30,
-  									color : "#fdfdfd"
-  								}
-  							]);
-					</script>
-					<p>Iteration ends on April 17, 2014</p>
-          <div class="row">
-  					<div class="col-md-6">
-  						<p class="small mt">CURRENT ITERATION</p>
-  						<p>{{currentIteration}}</p>
-  					</div>
-  					<div class="col-md-6">
-  						<p class="small mt">WORKED HOURS</p>
-  						<p>{{totalWorkedHours}}</p>
-  					</div>
-  				</div>
-	          
-	   </div>
-	      <!-- grey-panel -->
-    	</div>
-    	<!--col-md-4-->
+  <div class="col-md-4 col-sm-4 mb panel-dash-item" id="projectDashItem_{{_id}}">
     	
+  	<div class="white-panel pn donut-chart sticky">
+  			
+  		<div class="white-header">
+				<h4>{{name}} <a href="#" id="openProject"> <i class="fa fa-expand"></i></a></h4> 
+      </div>
+			<div class="short-dash-detail">
+			  
+			
+			<div class="row">
+				<div class="col-sm-6 col-xs-6 goleft">
+					<p><i class="fa fa-database"></i> 70% finished</p>
+				</div>
+				<div class="col-sm-6 col-xs-6 goleft">
+					<p>{{members.length}} Members  <i class="fa fa-database"></i></p>
+				</div>
+      </div>
+			<canvas id="projectId_{{_id}}" height="100" width="100"></canvas>
+			<script>
+				new Chart(document.getElementById("projectId_{{_id}}").getContext("2d"))
+						  .Doughnut([
+								{
+									value: 70,
+									color:"#68dff0"
+								},
+								{
+									value : 30,
+									color : "#fdfdfd"
+								}
+							]);
+			</script>
+			<p>Iteration ends on April 17, 2014</p>
+        
+      <div class="row">
+				<div class="col-md-6">
+					<p class="small mt">CURRENT ITERATION</p>
+					<p>{{currentIteration}}</p>
+				</div>
+				<div class="col-md-6">
+					<p class="small mt">WORKED HOURS</p>
+					<p>{{totalWorkedHours}}</p>
+				</div>
+			</div>
+			
+			</div>
+			<div class="large-dash-detail">
+			  {{>dashProjectDetail}}
+			</div>
+	  </div>
+	    <!-- grey-panel -->
+  </div>
+    <!--col-md-4-->
 </template>
