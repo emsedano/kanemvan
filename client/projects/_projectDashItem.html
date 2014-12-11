@@ -1,9 +1,9 @@
     <template name="projectDashItem">
     <!-- SERVER STATUS PANELS -->
-    	<div class="col-md-4 col-sm-4 mb">
-    		<div class="white-panel pn donut-chart">
+    	<div class="col-md-4 col-sm-4 mb panel-dash-item" id="projectDashItem_{{_id}}">
+    		<div class="white-panel pn donut-chart sticky">
     			<div class="white-header">
-						<h5>{{name}}</h5>
+						<h4>{{name}} <a href="#" id="openProject"> <i class="fa fa-expand"></i></a></h4> 
           </div>
 					<div class="row">
 						<div class="col-sm-6 col-xs-6 goleft">

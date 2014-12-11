@@ -2,6 +2,10 @@ body{
   color: #5D4258;
 }
 
+.header {
+  width: 50%;
+}
+
 #container header div.top-menu{
   padding: 15px 0px;
 }
@@ -59,4 +63,9 @@ background: #424a5d;
 
 .pn {
   height: 290px!important;
+    -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
