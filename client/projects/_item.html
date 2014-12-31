@@ -1,6 +1,13 @@
 <template name="project_item">
-  <li>
-    <button class="delete">&times;</button>
-    <span class="text"><strong>{{name}}</strong></span>
-  </li>
+  <div class="col-lg-3 col-md-3 col-sm-3 mb">
+		<div class="steps pn project-item">
+		  {{#with this}}
+        <a class="project-name" href="{{pathFor route='project.show'}}" id="goDetail">{{name}}</a>
+      {{/with}}
+			
+		  <a href="/projects/{{_id}}/tasks">Backlog</a>
+		  <a href="/projects/{{name}}/iterations">{{iterations.length}} Iterations</a>
+		  <a href="/reports/{{name}}">Reports</a>
+		</div>
+	</div>
 </template>

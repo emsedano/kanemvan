@@ -8,6 +8,7 @@ Template.newProjectModal.events({
     Meteor.call("Project.create", name, description);
     
     $("#newProjectModal").hide();
+    $( ".close" ).trigger( "click" );
     return false;
   }
 })

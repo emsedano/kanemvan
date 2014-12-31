@@ -36,3 +36,43 @@
 .kanban-body .pn i {
   margin-top: 15px!important;
 }
+
+.projectList{
+  margin-left: 0px;
+  margin-right: 15px;
+}
+
+.projectList .project-item{
+  height: 250px!important;
+}
+.projectList .project-item a{
+  background: #393D40;
+  height: 65px;
+  line-height: 65px;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #44494e;
+  color: #889199;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-indent: 52px;
+  cursor: pointer;
+  transition: all 0.7s ease;
+  margin: 0px;
+}
+
+.projectList .project-item .project-name{
+  background: #f1783c!important;
+  border: none;
+  padding: 0px;
+  margin: 0 auto;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}

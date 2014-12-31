@@ -11,7 +11,7 @@ Template.projectDashItem.events({
     
     var _height = !$(panel).hasClass("panel-expanded") ? 290 : (window.innerHeight - 80); 
     $(sticky).css("min-height", _height);
-    $.scrollTo(panel, 1000);
+    $.scrollTo(target, 1000);
   }
 });
 

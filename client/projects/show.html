@@ -1,0 +1,39 @@
+<template name="ProjectShow">
+  <div class="col-sm-12 form-panel">
+      <h1> <i class="fa fa-angle-right"></i>{{name}}</h1>
+      
+      <div class="col-sm-6">
+          <form class="form-horizontal style-form" method="get">
+            
+              {{> projectForm}}
+          </form>
+    
+    	</div>
+    	
+    	<div class="col-sm-6">
+    	  <div class="col-lg-6 ds">
+                    <!--COMPLETED ACTIONS DONUTS CHART-->
+						<h3>TEAM MEMBERS</h3>
+						
+						{{#each members}}
+						  {{>team_member}}
+						{{/each}}
+              
+          </div>
+    	</div>
+  </div>
+</template> 
+
+
+<template name="team_member">
+  <div class="desc">
+  	<div class="thumb">
+  		<img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
+  	</div>
+  	<div class="details">
+  		<p><a href="#">{{profile.name}}</a><br>
+  		   <muted>Available</muted>
+  		</p>
+  	</div>
+  </div>
+</template>

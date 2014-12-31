@@ -1,4 +1,5 @@
 
+
 Template.user_logged.events({
   "click #logout": function(e, tmpl){
     Meteor.logout(function(err){

@@ -29,7 +29,6 @@ section.sidebar-closed .header .logo{
 
 
 #sidebar {
-  width: 220px!important;
   background: #5D4258!important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;

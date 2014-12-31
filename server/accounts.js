@@ -10,7 +10,7 @@ ServiceConfiguration.configurations.insert({
 
 
 Accounts.onCreateUser(function(options, user){
-  console.log(" Options => " + JSON.stringify(options));
+ 
   if(user.services.github){
     var accessToken, result, profile;
     
@@ -40,9 +40,9 @@ Accounts.onCreateUser(function(options, user){
   }
   
   user.profile = options.profile;
+  
   console.log("creating => " + JSON.stringify(user));
   return user;
 });
-
 
 
