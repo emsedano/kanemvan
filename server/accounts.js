@@ -41,7 +41,7 @@ Accounts.onCreateUser(function(options, user){
   
   user.profile = options.profile;
   
-  console.log("creating => " + JSON.stringify(user));
+  console.log("onCreateUser => " + JSON.stringify(user));
   return user;
 });
 

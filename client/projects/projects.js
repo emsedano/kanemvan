@@ -36,6 +36,21 @@ Template.projectsList.events({
   }
 });
 
+// Build the relationship between the user creator and the project
+Projects.find().observe({
+  
+  added: function(project) {
+    
+    console.log("projects.find().observe on added ");
+    var member  = Members.find({user_id: project.owner});
+    
+    MembersProjects.insert( {
+      user_id: member._id,
+      project_id: project._id
+    } );
+    
+  }
+});
 
 
 
